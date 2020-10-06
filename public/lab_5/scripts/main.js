@@ -3,6 +3,9 @@ function testFunction() {
     .then((response) => response.text())
     .then((response) => {
       console.log(response);
+
+      const fruits = ["apple", "orange", "tangerines"];
+
       const myTitle = document.querySelector("title");
       myTitle.textContent = response;
 
@@ -23,7 +26,7 @@ function testFunction() {
         .querySelectorAll("label");
 
       for (i = 0; i < labels.length; i++) {
-        labels[i].textContent = "apple";
+        labels[i].textContent = fruits[i];
       }
     });
 }
