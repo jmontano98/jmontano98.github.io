@@ -4,10 +4,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-<<<<<<< HEAD
 import countries from './public/lab_6/countries.js';
-=======
->>>>>>> 6535b5ca7cdbbc80d5ec2e63890b0f4d1176dcd5
 
 dotenv.config();
 
