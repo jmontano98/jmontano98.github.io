@@ -4,7 +4,10 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
+<<<<<<< HEAD
 import countries from './public/lab_6/countries.js';
+=======
+>>>>>>> 6535b5ca7cdbbc80d5ec2e63890b0f4d1176dcd5
 
 dotenv.config();
 
@@ -27,16 +30,13 @@ app.route('/api')
     res.send(`Lab 5 for ${process.env.NAME}`);
   })
   .post(async (req, res) => {
-
-    const pgData = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
-    const jsonObj = await pgData.json();
-
     console.log('POST request detected');
     console.log('Form data in res.body', req.body);
-    console.log(pgData);
-    console.log(jsonObj);
-    res.json(jsonObj);
-    //res.json(countries);
+
+    const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
+    const json = await data.json();
+    console.log('data from fetch', json);
+    res.json(json);
   });
 
 app.listen(port, () => {
