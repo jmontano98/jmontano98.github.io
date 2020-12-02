@@ -4,8 +4,6 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-import sqlite3 from 'sqlite3';
-import sqlite from 'sqlite';
 
 dotenv.config();
 
